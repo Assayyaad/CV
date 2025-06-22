@@ -1,0 +1,302 @@
+\documentclass[a4paper,10pt]{article}
+% --- PACKAGES ---
+\usepackage[a4paper,margin=0.6in]{geometry} % Set page margins
+\usepackage{libertine} % Use Libertine font for better professional appearance
+\usepackage[T1]{fontenc} % Better font encoding
+\usepackage{hyperref} % Create hyperlinks
+\usepackage{xcolor} % Use colors (though not explicit here, good for links)
+\usepackage{fontawesome5} % Use icons like phone, email, etc.
+\usepackage{enumitem} % For customizing lists like itemize
+
+% --- FONT, SPACING, LINKS ---
+\renewcommand{\baselinestretch}{1.05} % Adjust line spacing slightly
+\hypersetup{ % Configure hyperlinks
+    colorlinks=true, % Enable colored links
+    linkcolor=black, % Color for internal links (e.g., toc)
+    citecolor=black, % Color for citations
+    filecolor=black, % Color for file links
+    urlcolor=black,  % Color for URLs (important for email/web links)
+    pdfborder={0 0 0}, % Remove border around links (cleaner look)
+}
+\setlength{\parindent}{0pt} % No indentation for new paragraphs
+\setlength{\parskip}{0pt} % No extra space between paragraphs (control manually or with section breaks)
+
+% --- Custom Command for Sections ---
+% Defines a consistent style for section headings
+% Usage: \sectionheading{Section Title}
+\newcommand{\sectionheading}[1]{%
+  \addvspace{\medskipamount}% Add vertical space *before* the heading
+  {\large\bfseries\MakeUppercase{#1}} % Format the heading text
+  \noindent\rule{\linewidth}{0.4pt}% Draw the horizontal rule immediately after text
+  \vspace{\smallskipamount}% Add vertical space AFTER the rule, before content
+}
+
+% --- Customize itemize spacing for resume ---
+\setlist[itemize]{
+    label=*,           % Use asterisk as the bullet
+    leftmargin=*,      % Natural indentation (adjust if needed, e.g., leftmargin=2em)
+    topsep=0pt,        % Space above list - SET TO 0pt
+    partopsep=0pt,     % Extra space above if new paragraph
+    itemsep=2pt,       % Space between items
+    parsep=0pt         % Space between paragraphs within an item
+}
+
+
+% --- DOCUMENT START ---
+\begin{document}
+
+% --- HEADER ---
+\begin{minipage}[t]{0.55\textwidth}
+    \vspace{0pt} % Ensures top alignment
+    {\Large\bfseries Nabil Alsaiad}\\[4pt]
+    \textit{Game System \& Tool Programmer}\\[4pt]
+    Age: 23, Male
+\end{minipage}% <--- The '%' prevents a space between minipages
+\hfill % Pushes the next minipage to the right
+\begin{minipage}[t]{0.4\textwidth}
+    \vspace{0pt} % Ensures top alignment
+    \raggedleft % Right-align content within this minipage
+    \faPhone\ +60-111-174-1088 \\[4pt]
+    \faEnvelope\ \href{mailto:hi@assayyaad.pro}{hi@assayyaad.pro} \\[4pt]
+    \faGitlab\ \href{https://gitlab.com/Assayyaad}{Assayyaad} \\[4pt]
+    \faGithub\ \href{https://github.com/Assayyaad}{Assayyaad} \\[4pt]
+    \faLinkedin\ \href{https://linkedin.com/in/Assayyaad}{Assayyaad}
+\end{minipage}
+
+% --- Summary ---
+\sectionheading{Summary}
+Results-driven Game System and Tool Programmer with extensive expertise in creating development solutions for the gaming industry. Demonstrated proficiency in Unity development with six years of comprehensive experience, advanced programming skills in C\# and JavaScript, and specialized knowledge in developing game systems, development tools, and multiplayer gaming experiences. Committed to open source development and delivering efficient, scalable solutions that enhance productivity within game development teams. Proven track record in collaborative environments with strong technical leadership capabilities and a passion for innovative problem-solving in interactive entertainment.
+
+% --- Education ---
+\sectionheading{Education}
+
+\textbf{YouTube Learning Platform}\\
+Acquired comprehensive theoretical foundations through diverse educational content covering wide spectrum of programming concepts, game development methodologies, and software engineering principles. Developed adaptability skills by learning from multiple teaching styles and approaches to complex technical subjects.
+
+\addvspace{\smallskipamount}
+
+\textbf{Online Courses and Structured Learning}\\
+Completed specialized certification programs focusing on specific technical competencies including JavaScript algorithms, data structures, and multiple programming languages. Challenged by problem solving questions that provided practical application of theoretical knowledge in real-world development scenarios.
+
+\addvspace{\smallskipamount}
+
+\textbf{Self-Directed Learning and Experimentation}\\
+Developed expertise through independent research, experimental programming projects, and iterative learning from development challenges. Cultivated problem-solving abilities through hands-on experience with various technologies, debugging complex systems, and continuous skill advancement through project-based learning.
+
+% --- Certifications ---
+\sectionheading{Certifications}
+
+\textbf{Language Proficiency}\\
+IELTS Academic Examination -- Score: 6/9
+
+\addvspace{\smallskipamount}
+
+\textbf{FreeCodeCamp}\\
+JavaScript Algorithms and Data Structures -- \href{https://freecodecamp.org/certification/Assayyaad/javascript-algorithms-and-data-structures}{Link (Clickable)}
+
+\addvspace{\smallskipamount}
+
+\textbf{Sololearn Professional Development}\\
+Introduction to C\# Programming -- Certificate ID: CC-KQMDTAMA -- \href{https://www.sololearn.com/en/certificates/CC-KQMDTAMA}{Link (Clickable)}\\
+Introduction to JavaScript Development -- Certificate ID: CC-7A1QGUWT -- \href{https://www.sololearn.com/en/certificates/CC-7A1QGUWT}{Link (Clickable)}\\
+Introduction to C++ Programming -- Certificate ID: CT-DKF29HTQ -- \href{https://www.sololearn.com/en/certificates/CT-DKF29HTQ}{Link (Clickable)}\\
+Technology Fundamentals -- Certificate ID: CC-49YAACNH -- \href{https://www.sololearn.com/en/certificates/CC-49YAACNH}{Link (Clickable)}
+
+% --- Experience ---
+\sectionheading{Experience}
+
+\textbf{Discord Bot Developer} -- SGN Company \hfill September 2022 -- March 2024\\
+\textit{Remote Position (1 Year, 7 Months)}\\
+Company Links Page: \href{https://links.saudigamenews.com}{links.saudigamenews.com}
+\begin{itemize}[nosep]
+    \item Developed and maintained Discord bot applications using modern programming frameworks and API integration techniques.
+    \item Collaborated with cross-functional teams to implement automated solutions that enhanced community engagement and operational efficiency.
+    \item Designed scalable bot architectures capable of handling high-volume user interactions while maintaining optimal performance standards.
+    \item Implemented comprehensive testing protocols and deployment strategies for reliable service delivery in production environments.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{Technical Team Leadership}\\
+Led development teams in collaborative game development projects, coordinating technical tasks, establishing development timelines, and ensuring successful project milestone completion through effective resource management and strategic planning.
+
+\addvspace{\medskipamount}
+
+\textbf{Game Jam Participation}\\
+Active contributor in competitive game development events, demonstrating ability to create functional gaming experiences under stringent time constraints both as individual contributor and collaborative team member.
+
+\addvspace{\medskipamount}
+
+\textbf{Package Development and Publishing}\\
+Experienced in developing, publishing, and maintaining packages and tools for community distribution, focusing on creating solutions that enhance developer productivity and workflow efficiency.
+
+\addvspace{\medskipamount}
+
+\textbf{Developer Tool Creation}\\
+Have been asked asked to create development tools for various game developors multiple times, focusing on abstracting complex systems into user-friendly interfaces and efficient workflows.\\
+
+% --- Projects ---
+\sectionheading{Projects}
+
+\textbf{Unity Advanced System}\\
+\textit{Comprehensive architecture system replacing Unity's GameObject model with composition-based framework utilizing Controllers, Systems, and Workers.}\\
+\textit{Technologies: Unity, C\#, Software Architecture, Component Design}
+\begin{itemize}[nosep]
+    \item Architected and implemented advanced system design to enhance Unity's default GameObject architecture for improved development workflows.
+    \item Created modular composition-based framework consisting of Controllers, Systems, and Workers components for superior code organization and maintainability.
+    \item Developed extensive library of reusable components that significantly enhance game development workflow efficiency and long-term project maintainability.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{Simple Timers}\\
+\textit{Lightweight timer library designed for Unity development environments.}\\
+\textit{Technologies: Unity, C\#, API Development, Performance Optimization}
+\begin{itemize}[nosep]
+    \item Developed comprehensive timer library with intuitive API design for common timing operations in game development workflows.
+    \item Implemented performance optimization strategies and memory efficiency protocols suitable for production gaming environments.
+    \item Created extensive documentation and usage examples to facilitate adoption by development community.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{Tool Visualization in Phaser} -- \href{https://assayyaad.itch.io/anthima-phaser}{Project (Clickable)} -- \href{https://github.com/Anthima-Alaab/JavaScript}{Source (Clickable)} \hfill June 2024\\
+\textit{Interactive web-based visualization platform for game system development and educational purposes.}\\
+\textit{Technologies: JavaScript, Phaser Framework, Web Development, Interactive Visualization}
+\begin{itemize}[nosep]
+    \item Developed interactive web-based game system visualizations utilizing Phaser framework for educational and prototyping purposes.
+    \item Created comprehensive educational tools for understanding game development concepts, system architectures, and programming methodologies.
+    \item Implemented real-time system demonstrations suitable for learning environments and rapid prototyping workflows.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{Coin Effects Tools} -- \href{https://assayyaad.itch.io/riyal-coin}{Project (Clickable)} -- \href{https://gitlab.com/Assayyaad/Riyal-Coin}{Source (Clickable)} \hfill March 2025\\
+\textit{Specialized development tools for creating appealing coin collection and currency effect systems.}\\
+\textit{Technologies: Unity, Tool Development, Performance Optimization, Mobile Development}
+\begin{itemize}[nosep]
+    \item Developed specialized tools for creating engaging coin collection effects and currency systems suitable for various game genres.
+    \item Created comprehensive library of reusable components for common monetization and reward system implementations.
+    \item Focused on performance optimization strategies specifically designed for mobile and web game deployment environments.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{Grid Horror} -- \href{https://assayyaad.itch.io/grid-horror}{Project (Clickable)} -- \href{https://gitlab.com/Assayyaad/Grid-Horror}{Source (Clickable)} \hfill February 2025\\
+\textit{Atmospheric horror game featuring procedurally generated environments and tension-building gameplay mechanics.}\\
+\textit{Technologies: Procedural Generation, Game Design, Horror Mechanics, Algorithm Development}
+\begin{itemize}[nosep]
+    \item Developed atmospheric horror game with focus on procedural content generation algorithms for varied gameplay experiences.
+    \item Implemented sophisticated grid-based map generation system ensuring balanced difficulty and engaging exploration mechanics.
+    \item Created tension-building gameplay mechanics and horror-specific design elements for immersive player experience.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{TicTacToe With Odin \& SDL2} -- \href{https://assayyaad.itch.io/xo}{Project (Clickable)} -- \href{https://gitlab.com/Assayyaad/Lu3bat-XO}{Source (Clickable)} \hfill February 2025\\
+\textit{Classic game implementation utilizing modern systems programming language with direct graphics library integration.}\\
+\textit{Technologies: Odin Programming Language, SDL2, Low-level Programming, Systems Development}
+\begin{itemize}[nosep]
+    \item Explored modern systems programming language Odin for game development applications and performance optimization.
+    \item Implemented direct SDL2 integration for graphics rendering and input handling with efficient resource management.
+    \item Created clean, optimized code demonstrating low-level game programming concepts and system-level development practices.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{Chicken Out} -- \href{https://assayyaad.itch.io/chicken-out}{Project (Clickable)} \hfill June 2021\\
+\textit{Online multiplayer fighting game featuring innovative rock-paper-scissors combat mechanics with strategic powerup systems.}\\
+\textit{Technologies: Unity, C\#, Networking, Multiplayer Architecture}
+\begin{itemize}[nosep]
+    \item Developed real-time multiplayer fighting game supporting four concurrent players with stable network architecture and low-latency gameplay.
+    \item Implemented innovative rock-paper-scissors combat mechanics with diverse weapon systems and balanced competitive gameplay elements.
+    \item Created comprehensive powerup system with game balancing algorithms to ensure competitive multiplayer experience.
+\end{itemize}
+
+\addvspace{\medskipamount}
+
+\textbf{Village Warriors} -- \href{https://assayyaad.itch.io/village-warriors}{Project (Clickable)} \hfill April 2021\\
+\textit{Comprehensive RPG adventure game featuring sophisticated turn-based combat system and character progression mechanics.}\\
+\textit{Technologies: Unity, C\#, RPG Systems, Game Design}
+\begin{itemize}[nosep]
+    \item Designed and implemented comprehensive RPG mechanics including character progression systems, inventory management, and statistical advancement.
+    \item Created sophisticated turn-based combat system with strategic depth, variety in tactical options, and balanced difficulty progression.
+    \item Developed immersive game narrative and quest system architecture for enhanced player engagement and storyline progression.
+\end{itemize}
+
+% --- Skills ---
+\sectionheading{Skills}
+
+\textbf{Programming Languages}\\
+C\# (Expert Level), JavaScript (Expert Level), C++, Java, GDScript, Odin, Rust
+
+\addvspace{\smallskipamount}
+
+\textbf{Game Development Technologies}\\
+Unity Engine (6+ Years), Godot Engine, Bevy Framework, raylib, Game Systems Architecture, Development Tool Creation
+
+\addvspace{\smallskipamount}
+
+\textbf{Software Development Methodologies}\\
+Object-Oriented Programming (6+ Years), Functional Programming Paradigms, Design Pattern Implementation, Data Structures and Algorithms, Software Architecture Design
+
+\addvspace{\smallskipamount}
+
+\textbf{Development Tools and Platforms}\\
+Visual Studio (6+ Years), Visual Studio Code (4+ Years), Git Version Control (4+ Years), GitHub (4+ Years), GitKraken (3+ Years)
+
+\addvspace{\smallskipamount}
+
+\textbf{Core Technical Competencies}\\
+Advanced Problem Solving, Code Analysis and Optimization, Debugging and Testing, Software Quality Assurance, AI-Assisted Programming
+
+\addvspace{\smallskipamount}
+
+\textbf{Professional Skills}\\
+Project Planning and Management, Technical Documentation, Team Collaboration, and Leadership
+
+% --- Volunteering/Community ---
+\sectionheading{Volunteering/Community}
+
+\textbf{Discord Bot Development for Arab Godot Community}\\
+Developed and maintained Discord bot application for an Arabic-speaking Godot Engine developers community for 4 months, facilitating communication and resource sharing among developers in the region.
+
+\addvspace{\smallskipamount}
+
+\textbf{"Kun Awnan" Community Service Initiative}\\
+Volunteered with Arabian Culture Society's "Kun Awnan" community service event, organizing recreational activities for refugees family children during Eid Al-Adha celebrations, contributing to community welfare and cultural integration efforts.
+
+\addvspace{\smallskipamount}
+
+\textbf{Educational Event Organization}\\
+Organized a comprehensive five-day student lecture series featuring ten educational presentations with two daily sessions, demonstrating leadership in academic event planning and educational community engagement.
+
+\addvspace{\smallskipamount}
+
+\textbf{Community Social Events Coordination}\\
+Organized multiple family picnic events at Taman Tasik Cyberjaya Park, facilitating community building activities including recreational activities, group dining, and social interaction opportunities for local families.
+
+% --- Languages ---
+\sectionheading{Languages}
+\textbf{Arabic}: Native Speaker\\
+\textbf{English}: Fluent (IELTS 6/9)\\
+\textbf{Japanese}: Basic Conversational Level
+
+% --- Interests ---
+\sectionheading{Interests}
+\textbf{eSports}: Following professional gaming tournaments and competitive gaming scene developments\\
+\textbf{Gaming}: Passionate about analyzing game mechanics, design principles, and emerging trends in gaming industry\\
+\textbf{Anime}: Exploring storytelling techniques and visual design methodologies in anime media\\
+\textbf{Open Source}: Contributing to and maintaining open source projects within game development community\\
+\textbf{Paper Craft}: Engaging in precision-based creative activities for stress management and attention to detail development
+
+% --- Online Presence ---
+\sectionheading{Online Presence}
+\textbf{Portfolio \& Games}: \href{https://assayyaad.itch.io}{itch.io Portfolio (Clickable)}, \href{https://gd.games/Assayyaad}{GDevelop Games (Clickable)}, \href{https://www.npmjs.com/~nabil_alsaiad}{npm (Clickable)}\\
+\textbf{Development Activity}: \href{https://wakatime.com/@Assayyaad}{Wakatime Development Statistics (Clickable)}\\
+\textbf{Game Jams}: \href{https://globalgamejam.org/users/assayyaad}{Global Game Jam Participation (Clickable)}\\
+\textbf{Learning Platforms}: \href{https://www.sololearn.com/en/profile/17032869}{Sololearn (Clickable)}, \href{https://www.freecodecamp.org/Assayyaad}{FreeCodeCamp (Clickable)}, \href{https://www.codecademy.com/profiles/Assayyaad}{Codecademy (Clickable)}, \href{https://exercism.org/profiles/Assayyaad}{Exercism (Clickable)}\\
+\textbf{Professional Networking}: Discord @Assayyaad, \href{https://x.com/Assayyaad}{X/Twitter (Clickable)}, \href{https://linkedin.com/in/Assayyaad}{LinkedIn (Clickable)}, \href{https://youtube.com/@Assayyaad}{YouTube (Clickable)}
+
+% --- DOCUMENT END ---
+\end{document}
