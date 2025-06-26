@@ -431,15 +431,6 @@ footer {
   margin: 1rem 0;
 }
 
-/* Loading States */
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  color: var(--value-text-color);
-}
-
 /* Iconify Styles */
 .iconify-inline {
   margin-left: 0.5em;
