@@ -18,10 +18,6 @@
   --key-text-color: #d0d0d0; /* Key text - brighter for emphasis */
   --value-text-color: #a0a0a0; /* Value text - softer for secondary info */
 
-  /* Skill indicator colors - maintaining contrast while being gentle */
-  --skilldor-empty-color: #404040; /* Empty state - subtle dark gray */
-  --skilldor-filled-color: #e0e0e0; /* Filled state - bright but not harsh */
-
   /* Error colors - maintaining urgency while reducing strain */
   --error-color: #ff6b6b; /* Error text - softer red, less aggressive */
   --error-bg-color: #2d1b1b; /* Error background - dark red tint */

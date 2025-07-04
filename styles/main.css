@@ -256,11 +256,11 @@ footer {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--skilldor-empty-color);
+  background: var(--border-color);
 }
 
 .skill-dot.filled {
-  background: var(--skilldor-filled-color);
+  background: var(--section-title-color);
 }
 
 /* Tools */
