@@ -80,24 +80,12 @@ async function loadJSON(filePath) {
 async function loadData(page) {
   const sections = {
     shared: ['personal-info', 'contact', 'accounts'],
-    specific: [
-      'header',
-      'projects',
-      'certificates',
-      'skills',
-      'tools',
-      'interests',
-      'languages'
-    ]
+    specific: ['header', 'projects', 'certificates', 'skills', 'tools', 'interests', 'languages']
   }
 
   const sectionData = {
-    shared: await Promise.all(
-      sections.shared.map((str) => loadJSON(`data/${str}.json`))
-    ),
-    specific: await Promise.all(
-      sections.specific.map((str) => loadJSON(`data/pages/${page}/${str}.json`))
-    )
+    shared: await Promise.all(sections.shared.map((str) => loadJSON(`data/${str}.json`))),
+    specific: await Promise.all(sections.specific.map((str) => loadJSON(`data/pages/${page}/${str}.json`)))
   }
 
   return {

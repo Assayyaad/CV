@@ -15,10 +15,7 @@ const render = {
  */
 export function renderHeader({ title, tagline }) {
   const lang = getLang()
-  return render.container.empty(
-    render.item.title(title[lang]),
-    render.item.tagline(tagline[lang])
-  )
+  return render.container.empty(render.item.title(title[lang]), render.item.tagline(tagline[lang]))
 }
 
 /**
@@ -46,10 +43,7 @@ export function renderPersonalInfo({ name, age, sex }) {
  * @returns {string} HTML string for contact info
  */
 export function renderContact({ email, phone }) {
-  return render.container.empty(
-    render.item.email(email),
-    render.item.phone(phone)
-  )
+  return render.container.empty(render.item.email(email), render.item.phone(phone))
 }
 
 /**
@@ -65,11 +59,7 @@ export function renderAccounts(data) {
    * @returns {string} HTML string for account
    */
   function renderAccount({ name, link, icon }) {
-    return render.container.url(link, `Visit ${name} profile`, [
-      render.item.icon(icon),
-      ' ',
-      name
-    ])
+    return render.container.url(link, `Visit ${name} profile`, [render.item.icon(icon), ' ', name])
   }
 }
 
@@ -99,10 +89,7 @@ export function renderProjects(data) {
       render.item.date(date, type)
     ])
 
-    return render.container.article(type, [
-      nameContainer,
-      render.item.description(description[lang], type)
-    ])
+    return render.container.article(type, [nameContainer, render.item.description(description[lang], type)])
   }
 }
 
@@ -156,10 +143,7 @@ export function renderSkills(data) {
    * @returns {string} HTML string for skill
    */
   function renderSkill({ name, efficiency }) {
-    return render.container.div(type, [
-      render.item.name(name[lang], type),
-      render.container.dots(efficiency)
-    ])
+    return render.container.div(type, [render.item.name(name[lang], type), render.container.dots(efficiency)])
   }
 }
 
@@ -182,20 +166,11 @@ export function renderTools(data) {
    * @returns {string} HTML string for tool
    */
   function renderTool({ name, icon, link, yearsOfExperience }) {
-    const nameContainer = render.container.url(link, '', [
-      render.item.icon(icon),
-      ' ',
-      name
-    ])
+    const nameContainer = render.container.url(link, '', [render.item.icon(icon), ' ', name])
 
-    const toolNameContainer = render.container.div(`${type}-name`, [
-      nameContainer
-    ])
+    const toolNameContainer = render.container.div(`${type}-name`, [nameContainer])
 
-    return render.container.div(type, [
-      toolNameContainer,
-      render.item.experience(yearsOfExperience, type)
-    ])
+    return render.container.div(type, [toolNameContainer, render.item.experience(yearsOfExperience, type)])
   }
 }
 
@@ -235,10 +210,7 @@ export function renderLanguages(data) {
    * @returns {string} HTML string for language
    */
   function renderLanguage({ name, efficiency }) {
-    return render.container.div(type, [
-      render.item.name(name[lang], type),
-      render.item.name(efficiency[lang], type)
-    ])
+    return render.container.div(type, [render.item.name(name[lang], type), render.item.name(efficiency[lang], type)])
   }
 }
 

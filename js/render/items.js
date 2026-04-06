@@ -185,15 +185,7 @@ export function renderExperience(num, type) {
   if (!num) num = 0
 
   const text =
-    lang === 'ar'
-      ? num === 1
-        ? 'سنة'
-        : num === 2
-          ? 'سنتان'
-          : `${num} سنوات`
-      : num === 1
-        ? '1 year'
-        : `${num} years`
+    lang === 'ar' ? (num === 1 ? 'سنة' : num === 2 ? 'سنتان' : `${num} سنوات`) : num === 1 ? '1 year' : `${num} years`
   return `<span class="${type}-experience">${text}</span>`
 }
 

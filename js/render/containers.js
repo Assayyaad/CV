@@ -17,11 +17,7 @@ export function renderEmptyContainer(...data) {
  * @returns {string} HTML string
  */
 export function renderDivContainer(className, children) {
-  return renderEmptyContainer(
-    `<div class="${className}">`,
-    ...children,
-    '</div>'
-  )
+  return renderEmptyContainer(`<div class="${className}">`, ...children, '</div>')
 }
 
 /**
@@ -44,11 +40,7 @@ export function renderUrlContainer(url, label, children) {
  * @returns {string} HTML string
  */
 export function renderArticleContainer(className, children) {
-  return renderEmptyContainer(
-    `<article class="${className}">`,
-    ...children,
-    '</article>'
-  )
+  return renderEmptyContainer(`<article class="${className}">`, ...children, '</article>')
 }
 
 /**
