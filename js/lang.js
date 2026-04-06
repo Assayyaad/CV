@@ -1,8 +1,13 @@
 /** @import { Lang, LangCode } from './types.js' */
 
 // Global variable to track current language
+/** @type {LangCode} */
 let currLang = 'ar'
-let translations = {}
+/** @type {Record<LangCode, Record<string, string>>} */
+let translations = {
+  ar: {},
+  en: {}
+}
 
 /** @type {Record<LangCode, Lang>} */
 export const langs = {
@@ -38,12 +43,12 @@ function toggleLanguage() {
 
 // Apply translations to elements with data-translate attribute
 function applyTranslations() {
-  const elementsToTranslate = document.querySelectorAll('[data-translate]')
+  const elements = document.querySelectorAll('[data-translate]')
 
-  elementsToTranslate.forEach((element) => {
-    const key = element.getAttribute('data-translate') || ''
+  elements.forEach((el) => {
+    const key = el.getAttribute('data-translate') || ''
     if (translations[currLang] && translations[currLang][key]) {
-      element.textContent = translations[currLang][key]
+      el.textContent = translations[currLang][key]
     }
   })
 }
@@ -112,4 +117,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   applyTranslations()
 })
 
-window['toggleLanguage'] = toggleLanguage // Expose function globally
+// @ts-expect-error - Expose toggleLanguage globally for inline onclick
+window['toggleLanguage'] = toggleLanguage

@@ -4,12 +4,8 @@ import containerRenderers from './containers.js'
 import itemRenderers from './items.js'
 
 const render = {
-  container: {
-    ...containerRenderers
-  },
-  item: {
-    ...itemRenderers
-  }
+  container: { ...containerRenderers },
+  item: { ...itemRenderers }
 }
 
 /**
@@ -19,7 +15,6 @@ const render = {
  */
 export function renderHeader({ title, tagline }) {
   const lang = getLang()
-
   return render.container.empty(
     render.item.title(title[lang]),
     render.item.tagline(tagline[lang])

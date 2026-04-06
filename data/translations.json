@@ -12,7 +12,7 @@
     "footer.opensource": "Website files are",
     "footer.opensource_link": "Open Source",
     "footer.licensed": "and licensed under",
-    "footer.license": "The Unlicense"
+    "footer.license": "Waqf License"
   },
   "ar": {
     "section.personal": "المعلومات الشخصية",
@@ -27,6 +27,6 @@
     "footer.opensource": "ملفات الموقع",
     "footer.opensource_link": "مفتوحة المصدر",
     "footer.licensed": "ومرخصة تحت",
-    "footer.license": "الترخيص العام"
+    "footer.license": "ترخيص وقف"
   }
 }

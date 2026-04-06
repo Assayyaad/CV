@@ -84,7 +84,7 @@ export {}
 
 /**
  * @template {string} Value
- * @typedef {{ [key: LangCode]: Value }} MultiLang
+ * @typedef {Record<LangCode, Value>} MultiLang
  */
 
 // language
@@ -99,3 +99,19 @@ export {}
 /** @typedef {'ar' | 'en'} LangCode */
 /** @typedef {'العربية' | 'English'} LangName */
 /** @typedef {'rtl' | 'ltr'} LangDir */
+
+// other
+
+/**
+ * @typedef {Object} PageData
+ * @property {Header} header
+ * @property {PersonalInfo} personalInfo
+ * @property {Contact} contact
+ * @property {Account[]} accounts
+ * @property {Project[]} projects
+ * @property {Certificate[]} certificates
+ * @property {Skill[]} skills
+ * @property {Tool[]} tools
+ * @property {Interest[]} interests
+ * @property {Language[]} languages
+ */

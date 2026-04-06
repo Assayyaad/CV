@@ -1,9 +1,11 @@
+/** @import { Account, Certificate, Contact, Header, Interest, Language, PageData, PersonalInfo, Project, Skill, Tool } from './types.js' */
+
 import renderSection from './render/sections.js'
 
 /**
  * Populates a section with rendered data
  * @param {string} sectionId - ID of the section element
- * @param {Array|Object} data - Data to render
+ * @param {Array<any>|Object} data - Data to render
  * @param {(data: any) => string} renderFunction - Function to render individual items
  */
 function populateSection(sectionId, data, renderFunction) {
@@ -25,14 +27,14 @@ function populateSection(sectionId, data, renderFunction) {
 
 /**
  * Initializes the page by loading all sections
- * @param {Object} data - Data for the page
+ * @param {PageData} data - Data for the page
  */
 function initializePage(data) {
   // In a real implementation, this would load data from JSON files
   // For now, we'll use the sample data
 
   try {
-    ;[
+    const sections = [
       ['header', 'header'],
       ['personal-info', 'personalInfo'],
       ['contact', 'contact'],
@@ -43,7 +45,10 @@ function initializePage(data) {
       ['tools', 'tools'],
       ['interests', 'interests'],
       ['languages', 'languages']
-    ].forEach(([id, key]) => {
+    ]
+
+    sections.forEach(([id, key]) => {
+      // @ts-expect-error - TypeScript doesn't know the keys of PageData are dynamic
       populateSection(`${id}-content`, data[key], renderSection[key])
     })
   } catch (error) {
@@ -70,7 +75,7 @@ async function loadJSON(filePath) {
 /**
  * Simulates loading JSON data (in real implementation, would use fetch)
  * @param {string} page - Path to JSON file
- * @returns {Promise<Object>} Parsed JSON data
+ * @returns {Promise<PageData>} Parsed JSON data
  */
 async function loadData(page) {
   const sections = {
@@ -96,16 +101,16 @@ async function loadData(page) {
   }
 
   return {
-    header: sectionData.specific[0],
-    personalInfo: sectionData.shared[0],
-    contact: sectionData.shared[1],
-    accounts: sectionData.shared[2],
-    projects: sectionData.specific[1],
-    certificates: sectionData.specific[2],
-    skills: sectionData.specific[3],
-    tools: sectionData.specific[4],
-    interests: sectionData.specific[5],
-    languages: sectionData.specific[6]
+    header: /** @type {Header} */ (sectionData.specific[0]),
+    personalInfo: /** @type {PersonalInfo} */ (sectionData.shared[0]),
+    contact: /** @type {Contact} */ (sectionData.shared[1]),
+    accounts: /** @type {Account[]} */ (sectionData.shared[2]),
+    projects: /** @type {Project[]} */ (sectionData.specific[1]),
+    certificates: /** @type {Certificate[]} */ (sectionData.specific[2]),
+    skills: /** @type {Skill[]} */ (sectionData.specific[3]),
+    tools: /** @type {Tool[]} */ (sectionData.specific[4]),
+    interests: /** @type {Interest[]} */ (sectionData.specific[5]),
+    languages: /** @type {Language[]} */ (sectionData.specific[6])
   }
 }
 

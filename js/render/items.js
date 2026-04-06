@@ -1,3 +1,5 @@
+/** @import { LangCode } from '../types.js' */
+
 /**
  * @param {string} str
  * @returns {string} HTML string
@@ -111,7 +113,7 @@ export function renderIcon(str) {
  * @returns {string} HTML string
  */
 export function renderDate(str, type) {
-  const lang = document.documentElement.lang || 'ar'
+  const lang = /** @type {LangCode} */ (document.documentElement.lang || 'ar')
 
   let formattedDate = formatDate(str)
 
@@ -178,7 +180,7 @@ export function renderName(str, type) {
  * @returns {string} HTML string
  */
 export function renderExperience(num, type) {
-  const lang = document.documentElement.lang || 'ar'
+  const lang = /** @type {LangCode} */ (document.documentElement.lang || 'ar')
 
   if (!num) num = 0
 
@@ -187,11 +189,11 @@ export function renderExperience(num, type) {
       ? num === 1
         ? 'سنة'
         : num === 2
-        ? 'سنتان'
-        : `${num} سنوات`
+          ? 'سنتان'
+          : `${num} سنوات`
       : num === 1
-      ? '1 year'
-      : `${num} years`
+        ? '1 year'
+        : `${num} years`
   return `<span class="${type}-experience">${text}</span>`
 }
 
