@@ -1,6 +1,6 @@
-# الكشف التلقائي عن الملفات النصية وإجراء تسوية LF
 * text=auto eol=lf
 
-# تشير إلى جميع الملفات الثنائية حقاً التي ينبغي تعديلها
+*.webp binary
 *.png binary
 *.jpg binary
+*.pdf binary

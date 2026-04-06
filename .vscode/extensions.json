@@ -1,8 +1,15 @@
 {
   "recommendations": [
+    "goessner.mdmath",
+    "nhoizey.gremlins",
+    "redhat.vscode-yaml",
+    "yzane.markdown-pdf",
     "usernamehw.errorlens",
-    "christian-kohler.path-intellisense",
+    "docsmsft.docs-markdown",
     "esbenp.prettier-vscode",
-    "yoavbls.pretty-ts-errors"
+    "yoavbls.pretty-ts-errors",
+    "yzhang.markdown-all-in-one",
+    "mdickin.markdown-shortcuts",
+    "christian-kohler.path-intellisense"
   ]
 }
